@@ -15,7 +15,7 @@
       "macaddress": "00177A*"
     }
   ],
-  "documentation": "https://www.home-assistant.io/integrations/yale",
+  "documentation": "https://github.com/Yale-Libs/ha-yale",
   "integration_type": "hub",
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/Yale-Libs/ha-yale/issues",
@@ -25,8 +25,8 @@
     "yalexs"
   ],
   "requirements": [
-    "yalexs==9.2.13",
-    "yalexs-ble==4.0.1"
+    "yalexs>=9.2.13",
+    "yalexs-ble>=4.0.1"
   ],
   "version": "2026.10.4"
 }
