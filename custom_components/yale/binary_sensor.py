@@ -1,17 +1,11 @@
 """Support for Yale binary sensors."""
 
+import logging
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from functools import partial
-import logging
 from typing import override
-
-from yalexs.activity import Activity, ActivityType
-from yalexs.doorbell import DoorbellDetail
-from yalexs.lock import LockDetail, LockDoorStatus
-from yalexs.manager.const import ACTIVITY_UPDATE_INTERVAL
-from yalexs.util import update_lock_detail_from_activity
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,
@@ -22,6 +16,11 @@ from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 from homeassistant.helpers.event import async_call_later
+from yalexs.activity import Activity, ActivityType
+from yalexs.doorbell import DoorbellDetail
+from yalexs.lock import LockDetail, LockDoorStatus
+from yalexs.manager.const import ACTIVITY_UPDATE_INTERVAL
+from yalexs.util import update_lock_detail_from_activity
 
 from . import YaleConfigEntry, YaleData
 from .entity import YaleDescriptionEntity
