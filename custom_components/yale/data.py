@@ -1,13 +1,12 @@
 """Support for Yale devices."""
 
-from yalexs.lock import LockDetail
-from yalexs.manager.data import YaleXSData
-from yalexs_ble import YaleXSBLEDiscovery
-
 from homeassistant.config_entries import SOURCE_INTEGRATION_DISCOVERY
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers import discovery_flow
+from yalexs.lock import LockDetail
+from yalexs.manager.data import YaleXSData
+from yalexs_ble import YaleXSBLEDiscovery
 
 from .gateway import YaleGateway
 
