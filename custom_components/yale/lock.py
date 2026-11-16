@@ -4,10 +4,6 @@ import logging
 from typing import Any, override
 
 from aiohttp import ClientResponseError
-from yalexs.activity import ActivityType
-from yalexs.lock import Lock, LockOperation, LockStatus
-from yalexs.util import get_latest_activity, update_lock_detail_from_activity
-
 from homeassistant.components.lock import (
     LockEntity,
     LockEntityFeature,
@@ -18,6 +14,9 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
 from homeassistant.util import dt as dt_util
+from yalexs.activity import ActivityType
+from yalexs.lock import Lock, LockOperation, LockStatus
+from yalexs.util import get_latest_activity, update_lock_detail_from_activity
 
 from . import YaleConfigEntry, YaleData
 from .entity import YaleEntity

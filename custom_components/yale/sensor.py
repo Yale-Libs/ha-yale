@@ -4,11 +4,6 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any, cast, override
 
-from yalexs.activity import ActivityType, LockOperationActivity
-from yalexs.doorbell import Doorbell
-from yalexs.keypad import KeypadDetail
-from yalexs.lock import LockDetail
-
 from homeassistant.components.sensor import (
     RestoreSensor,
     SensorDeviceClass,
@@ -24,6 +19,10 @@ from homeassistant.const import (
 )
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
+from yalexs.activity import ActivityType, LockOperationActivity
+from yalexs.doorbell import Doorbell
+from yalexs.keypad import KeypadDetail
+from yalexs.lock import LockDetail
 
 from . import YaleConfigEntry
 from .const import (
