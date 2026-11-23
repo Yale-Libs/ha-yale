@@ -4,12 +4,6 @@ from pathlib import Path
 from typing import cast
 
 from aiohttp import ClientError
-from yalexs.const import Brand
-from yalexs.exceptions import YaleApiError
-from yalexs.manager.const import CONF_BRAND
-from yalexs.manager.exceptions import CannotConnect, InvalidAuth, RequireValidation
-from yalexs.manager.gateway import Config as YaleXSConfig
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EVENT_HOMEASSISTANT_STOP
 from homeassistant.core import HomeAssistant
@@ -23,6 +17,11 @@ from homeassistant.helpers.config_entry_oauth2_flow import (
     OAuth2Session,
     async_get_config_entry_implementation,
 )
+from yalexs.const import Brand
+from yalexs.exceptions import YaleApiError
+from yalexs.manager.const import CONF_BRAND
+from yalexs.manager.exceptions import CannotConnect, InvalidAuth, RequireValidation
+from yalexs.manager.gateway import Config as YaleXSConfig
 
 from .const import DOMAIN, PLATFORMS
 from .data import YaleData

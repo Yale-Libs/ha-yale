@@ -2,10 +2,9 @@
 
 from typing import Any
 
-from yalexs.const import Brand
-
 from homeassistant.components.diagnostics import async_redact_data
 from homeassistant.core import HomeAssistant
+from yalexs.const import Brand
 
 from . import YaleConfigEntry
 

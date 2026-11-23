@@ -3,17 +3,16 @@
 from abc import abstractmethod
 from typing import override
 
-from yalexs.activity import Activity, ActivityType
-from yalexs.doorbell import Doorbell, DoorbellDetail
-from yalexs.keypad import KeypadDetail
-from yalexs.lock import Lock, LockDetail
-from yalexs.util import get_configuration_url
-
 from homeassistant.const import ATTR_CONNECTIONS
 from homeassistant.core import callback
 from homeassistant.helpers import device_registry as dr
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity import Entity, EntityDescription
+from yalexs.activity import Activity, ActivityType
+from yalexs.doorbell import Doorbell, DoorbellDetail
+from yalexs.keypad import KeypadDetail
+from yalexs.lock import Lock, LockDetail
+from yalexs.util import get_configuration_url
 
 from . import DOMAIN, YaleData
 from .const import MANUFACTURER
