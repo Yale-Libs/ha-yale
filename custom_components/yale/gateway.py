@@ -4,10 +4,9 @@ import logging
 from pathlib import Path
 
 from aiohttp import ClientSession
+from homeassistant.helpers import config_entry_oauth2_flow
 from yalexs.authenticator_common import Authentication, AuthenticationState
 from yalexs.manager.gateway import Gateway
-
-from homeassistant.helpers import config_entry_oauth2_flow
 
 _LOGGER = logging.getLogger(__name__)
 

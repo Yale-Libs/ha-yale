@@ -4,10 +4,6 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, override
 
-from yalexs.activity import Activity
-from yalexs.doorbell import DoorbellDetail
-from yalexs.lock import LockDetail
-
 from homeassistant.components.event import (
     EventDeviceClass,
     EventEntity,
@@ -15,6 +11,9 @@ from homeassistant.components.event import (
 )
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
+from yalexs.activity import Activity
+from yalexs.doorbell import DoorbellDetail
+from yalexs.lock import LockDetail
 
 from . import YaleConfigEntry, YaleData
 from .entity import YaleDescriptionEntity
